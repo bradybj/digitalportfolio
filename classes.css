@@ -1,0 +1,703 @@
+/* CSS for the form */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center the items */
+    justify-content: center; /* Vertically center the items */
+    height: 100vh; /* Make the main element take up the full viewport height */
+    margin-top:10vh;
+    
+}
+
+form {
+    width: 60%; /* You can adjust this width as needed */
+    height:60%;
+    max-width: 600px; /* Limit the maximum width of the form */
+    padding: 20px; /* Add some padding for spacing */
+    background-color: #fff; /* Optional: Add a background color for better readability */
+    border-radius: 10px; /* Optional: Add rounded corners for aesthetics */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: -webkit-fill-available;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 150px;
+}
+
+fieldset {
+    border: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button{
+    margin-top:2vh;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top:2vh;
+}
+
+button.submit-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top:2vh;
+}
+
+button.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+body {
+    /* Everything in the site (changes the background color and font) */
+    padding-top: clamp(50px, 15vw, 100px);
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x:clip;
+    margin: 0;
+    z-index: -1;
+    background: linear-gradient(7deg, #292929, #c3c3c3);
+    background-size: 100% 100%;
+   
+}
+
+ @media screen and (max-width:480px) { 
+     ul.navbar { 
+         flex-direction: column; /* Change direction to vertical */ 
+         height: auto; /* Remove fixed height */  
+         align-items:center;
+     }
+         li.navbarword { 
+             text-align: center; /* Center the navbar items */ margin: 5px 0; /* Add some margin between items */ 
+             width:100%;
+         } 
+             li.navbarword a { 
+                 display: none; /* Hide the words by default */ } 
+                 #logo { 
+                     justify-content: center; /* Center the logo */ margin-bottom: 20px; /* Add space below the logo */ } 
+                     #logo:hover a ~ .navbarword a { display: block; /* Display the words when logo is hovered */ color:#b5945d;} } 
+ 
+ 
+ @media screen and (max-width: 480px) { .navbar.vertical {
+     display: block;  flex-direction: column; height: auto; } 
+     .navbar.vertical .navbarword { 
+         text-align: center; display: block;} 
+         .navbar.vertical .navbarword a { 
+             display: block; margin-top:18px; color:#b5945d; font-size:clamp(15px, 6.45vw, 100px);} 
+ #hamburger-menu {
+     display:block;
+     position: absolute;
+     left:10px;
+     top:2vh;
+     width:15vw;
+     height:auto;
+ } }
+
+ @media screen and (min-width:481px) {
+     #hamburger-menu{
+         display: none;
+     }
+ }
+ 
+ul.navbar {
+   list-style-type: none;
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: clamp(45px, 12vh, 1000px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    margin: auto;
+    z-index: 1;
+}
+
+li.navbarword {
+    /*Rules for word format on Navbar*/
+    text-align: center;
+    flex-grow: 1; /* Distribute available space evenly */
+    margin-right:0px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+}
+
+li.navbarword a:hover{
+    /*Individual words themself when mouse hovers.*/
+ color:#b5945d;
+ font-size:clamp(15px, 3.45vw, 100px);
+ transition-duration: 1s;
+}
+
+li.navbarword a:active{
+    /*Individual words themself when mouse hovers.*/
+ color:#b5945d;
+}
+
+li.navbarword a {
+    /*Individual words themself*/
+    color: #c3c3c3;
+    font-size: clamp(15px, 2.65vw, 100px);
+    text-decoration:underline;
+    padding: 0;
+}
+
+/* Navbar for Samples*/
+
+ul.samplestypes {
+    list-style-type: none;
+     margin-left: 0;
+     padding: 0;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #b5945d;
+     height: clamp(30px, 8vh, 800px);
+     position: static;
+     width: 80vw;
+     top: 1vh;
+     margin: auto;
+     z-index: 1;
+     border-radius: 4%;
+     border: 2px solid black;
+ }
+ 
+ li.samplesword {
+     /*Rules for word format on Navbar*/
+     text-align: center;
+     flex-grow: 1; /* Distribute available space evenly */
+     margin-right:0px;
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: 800;
+ }
+ 
+ li.samplesword a:hover{
+     /*Individual words themself when mouse hovers.*/
+  font-size:clamp(15px, 3.45vw, 100px);
+  transition-duration: 1s;
+ }
+ 
+ 
+ li.samplesword a {
+     /*Individual words themself*/
+     color: black;
+     font-size: clamp(15px, 2.65vw, 100px);
+     text-decoration:overline;
+     padding: 0;
+ }
+
+#logo {
+    /*Brady Jones logo alignment on navbar*/
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+}
+
+#SmallLogo {
+    /*Logo itself*/
+    width: auto; 
+    height: clamp(45px, 11vh, 1000px);       
+    margin-right: 0; /* Add spacing to the right of the logo */
+    margin-left:1vw;
+}
+
+img#SmallLogo:hover {
+    /*Logo itself*/
+    width: auto; 
+    transition-duration:1s;
+    margin-right: 0; /* Add spacing to the right of the logo */
+    margin-left:1vw;
+    animation: fadeIn 1s; 
+}
+
+ 
+h6{
+    margin-bottom:24vh;
+}
+
+.hyperemail{
+    color:#b5945d;
+    font-size:clamp(10px, 1vw, 20px);
+} 
+ 
+ 
+th{
+    height: 7vh;
+    border:3px solid black;
+    font-size:clamp(10px, 1.2vw, 60px);
+}
+
+
+table {
+  margin-top: 5vh;
+  border:1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e3e3e3;
+}
+
+td{
+    font-size:clamp(10px, 1vw, 60px);
+    height: 5vh;
+    border:1px solid black;
+    text-align:center;
+}
+ .audio-player {
+    width: 100%;
+    height: 200%;
+    position: relative;
+    border-radius: 10px;
+    background-color:#898989;
+}
+
+ iframe {
+     /*Spotify Iframe of song preview*/
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    width: 50vw;
+    min-width: 350px;
+    max-width: 4000px;
+    height:60vh;
+    max-height:4000px;
+    min-height: 350px;
+ }
+ 
+.coverart {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.upcomingcoverart {
+    width: auto;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    display:block;
+    border-radius: 5%;
+}
+
+ .html-embed-2 {
+    text-align: center;
+    width: 250;
+    }
+    
+.music-div {
+    text-align: center;
+    padding: 20px 10px;
+    transition: all .2s cubic-bezier(.645, .045, .355, 1);
+    color:#000000;
+    font-size:clamp(30px, 5vw, 80px);
+    font-family:monospace;
+    margin-top: 10vh;
+}
+ 
+#demo {
+  color:#000000;
+    font-size:clamp(30px, 4vw, 60px);
+    font-family:monospace;
+    text-align:center;
+    text-shadow: 2.5px 2.5px #ffffff;
+    padding-top:5vmin;
+}
+
+#Hyper{
+    /*Hyperlinks throughout pages*/
+    color:#000000;   
+}
+
+#Hyper:hover{
+    /*Hyperlinks on hover*/
+    color:#d69842;
+}
+
+
+#pagetitle{
+    /*Main title on page*/
+    color:#000000;
+    font-size:clamp(30px, 9vw, 90px);
+    font-family:monospace;
+    text-align:center;
+    text-shadow: 2px 2px #ffffff;
+    padding-top:10vmin;
+}
+
+#vbtitle{
+    /*Main title on page*/
+    color:#835bc3;
+    font-size:clamp(30px, 9vw, 90px);
+    font-family:monospace;
+    text-align:center;
+    text-shadow: 2px 2px #ffffff;
+    padding-top:10vmin;
+    text-decoration: underline;
+}
+
+#webtitle{
+    /*Main title on page*/
+    color:#100cfc;
+    font-size:clamp(30px, 9vw, 90px);
+    font-family:monospace;
+    text-align:center;
+    text-shadow: 2px 2px #ffffff;
+    padding-top:10vmin;
+    text-decoration: underline;
+}
+
+#abouttitle{
+    /*Main title on about page*/
+    color:#000000;
+    font-size:clamp(20px, 2.5vw, 70px);
+    font-family:monospace;
+    text-align:center;
+    padding-top:22vh;
+}
+#livetitle{
+    /*Main title on live page*/
+    color:#000000;
+    font-size:clamp(20px, 2.5vw, 70px);
+    font-family:monospace;
+    text-align:center;
+    padding-top:2vh;
+}
+
+#abouttitle2{
+    /*Main title on about page*/
+    color:#000000;
+    font-size:clamp(20px, 2.5vw, 70px);
+    font-family:monospace;
+    text-align:center;
+    padding-top:5vh;
+}
+
+#Upcomingpagetitle{
+    /*Main title on upcoming page*/
+    color:#ffffff;
+    font-size:clamp(30px, 5vw, 80px);
+    font-family:monospace;
+    text-align:center;
+    text-shadow: 2.5px 2.5px #000000;
+  padding-top:10vmin;
+}
+
+#homepagepic{
+    /*Picture of Brady on homepage*/
+    height:auto;
+    display: block;
+    filter: grayscale(90%);
+    margin-left: auto;
+    margin-right: auto;
+    width:60vmin;
+    position:relative;
+    border-radius: 5%;
+}
+
+
+#binarypic{
+    /*Screenshot of Binary Clock app.*/
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:60vmin;
+    position:relative;
+    border-radius: 5%;
+    border: 1.2vmin solid black;
+}
+
+#smarthomepic{
+    /*Screenshot of Smart Home Savings App.*/
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:60vmin;
+    position:relative;
+    border: 1.2vmin solid black;
+    border-radius: 5%;
+}
+
+#BjMusicpic{
+    /*Screenshot of Brady Jones music website.*/
+    height:60vmin;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:auto;
+    position:relative;
+    border: 2vmin solid black;
+    border-radius: 5%;
+}
+
+#OJpic{
+    /*Screenshot of Ocean Janitor website.*/
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:60vmin;
+    position:relative;
+    border: 2vmin solid black;
+    border-radius: 5%;
+}
+
+#exampletitle{
+    /*Individual project title */
+    margin-right:5vw;
+    margin-left:5vw;
+    text-align: center;
+    color:black;
+    font-size:clamp(13.5px, 6.5vw, 90px);
+    font-family:cursive;
+    margin-bottom: 2vh;
+    margin-top:10vh;
+
+}
+
+
+#resumepic{
+    height: auto;
+    display: block;
+    filter: grayscale(50%);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    min-width: 300px;
+    width: 80%;
+    position: relative;
+    border-radius: 3%;
+
+}
+
+#ContactPagepic{
+    /*Picture of Brady on contact page*/
+    height: auto;
+    display: block;
+    filter: grayscale(85%);
+    margin-left: auto;
+    margin-right: auto;
+    width:30vw;
+    min-width:220px;
+    max-width:400px;
+    margin-top:3vw;
+     border-radius: 5%;
+}
+
+#UpcomingPagepic{
+    /*Picture of Brady on Upcoming page*/
+    height: auto;
+    display: block;
+    filter: grayscale(0%);
+    margin-left: auto;
+    margin-right: auto;
+    width:30vw;
+    min-width:220px;
+    max-width:400px;
+    border-radius: 2%;
+}
+
+#SocialPagepic{
+    /*Picture of Brady on Social page*/
+    height: auto;
+    display: block;
+    filter: grayscale(10%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:12vw;
+    width:30vw;
+    min-width:220px;
+    max-width:400px;
+border-radius: 5%;
+     margin-bottom:25vh;
+}
+
+
+#AboutPagepic{
+    /*Picture of Brady on about page*/
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    margin-left: auto;
+    margin-right: auto;
+    width:38vw;
+    min-width:220px;
+    max-width:400px;
+    margin-top:10vh;
+     border-radius: 5%;
+}
+
+
+
+.emaillink {
+    /* Email Icon Link*/
+    display: block;
+    justify-content: space-between; /* Spread out the icons evenly */
+    align-items: center; /* Vertically center the icons */
+    height: 15vh;
+    text-align: center;
+    max-width: 50vw; /* Set a maximum width for the container */
+    margin: auto; /* Center the container horizontally */
+    width: auto;
+    min-width: 90px;
+    border: .35vw ridge black;
+    margin-top:10vh;
+    margin-bottom:10vh;
+}
+
+#pagetext{
+    /*small text under title*/
+    margin-right:5vw;
+    margin-left:5vw;
+    text-align: center;
+    color:black;
+    font-size:clamp(13.5px, 2.5vw, 30px);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    margin-top: 30px;
+    font-style:italic;
+}
+
+#exampledescription{
+    /*Description under screenshot*/
+    margin-right:10vw;
+    margin-left:10vw;
+    text-align: center;
+    color:black;
+    font-size:clamp(13.5px, 2.5vw, 30px);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    margin-top: 30px;
+}
+
+#albumtitle {
+     /*Title over album cover*/
+
+    color:black;
+    font-family:Courier; 
+    color:#000000;
+    font-size:clamp(20px, 3vw, 80px);
+    text-align:center;
+    text-shadow: 1px 1px #ffffff;
+    padding-top:3.5vmin;
+}
+
+#abouttext{
+    /*small text under title*/
+    margin-right:5vw;
+    margin-left:5vw;
+    text-align: center;
+    color:black;
+    font-size:clamp(10px, 1.5vw, 20px);
+    font-family:monospace; 
+    margin-top: 1vh;
+}
+
+#abouttext2{
+    /*small text under title*/
+    margin-right:5vw;
+    margin-left:5vw;
+    text-align: left;
+    color:black;
+    font-size:clamp(10px, 1.5vw, 20px);
+    font-family:monospace; 
+    margin-top: 1vh;
+}
+
+#upcomingtext{
+    /*small text under title*/
+    text-align: center;
+    color:#b5945d;
+    text-shadow: 1.8px 1.8px black;
+    font-size:clamp(17.5px, 3.5vw, 30px);
+    font-family:monospace; 
+    margin-top: 30px;
+    font-style:italic;
+}
+
+#homepagetext{
+    /*small text under title on homepage*/
+    margin-right:5vw;
+    margin-left:5vw;
+    text-align: center;
+    color:black;
+    font-size:clamp(13.5px, 3.5vw, 30px);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    margin-top: 60px;
+    font-style:italic;
+    margin-bottom: 5vh;
+    margin-top:1vh;
+}
+
+#hyperinstruction{
+    /*words under icons*/
+ color:black;
+ font-size:clamp(10px, 1vw, 30px);
+ font-family: monospace; 
+ text-align:center;
+}
+
+#aboutlist{
+     list-style: square;
+    list-style-position: outside;
+    list-style-type: circle;
+    width: auto;
+    margin: 0 auto; /* Center the list horizontally */
+    padding: 0; /* Remove default padding */
+    font-family: monospace;
+    font-size: clamp(13.5px, 3.5vw, 30px); /* Adjust font size */
+    text-align: center; /* Center the list items */
+    margin-top: 5vh; /* Adjust top margin as needed */
+    max-width: 80%; /* Limit the maximum width of the list */
+}
+
+#aboutlist2{
+    list-style:square;
+    list-style-position:outside;
+    list-style-type: circle;
+    width:auto;
+    height:10vw;
+    margin-left:10vw;
+    margin-right:10vw;
+    align-items:center;
+    text-align:center;
+    font-family:monospace;
+}
